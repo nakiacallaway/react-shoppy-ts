@@ -25,7 +25,7 @@ const HomePage = () => {
                 <h2>Home Page</h2>
             </div>
         </div>
-        <div className="row">
+        {/* <div className="row">
             <ul className="list-group">
                 {products.map((product, index) => {
                     return (
@@ -33,7 +33,7 @@ const HomePage = () => {
                     )
                 })}
             </ul>
-        </div>
+        </div> */}
     </div>
     )
 }
