@@ -1,14 +1,12 @@
-import './App.css';
+import {BrowserRouter as Router} from 'react-router-dom';
+import AppRoutes from './routers/AppRoutes';
 
 const App = () => {
   return (
-    <div className='containter'>
-      <div className="row text-center">
-        <div className="col">
-          <h2>This is my app</h2>
-        </div>
-      </div>
-    </div>
+    <Router>
+      <AppRoutes />
+    </Router>
+
   );
 }
 
