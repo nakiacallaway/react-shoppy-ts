@@ -4,13 +4,10 @@ import {GlobalContext} from '../context/GlobalContext';
 const HomePage = () => {
     const {products, getProducts} = useContext(GlobalContext);
     
-    
-
     useEffect(() => {
         getProducts();
     }, []);
      
-
     return (
     <div id='home'>
         <div className="row text-center">
