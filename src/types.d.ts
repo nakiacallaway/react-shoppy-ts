@@ -6,3 +6,11 @@ type Product = {
     description: string,
     image: string
 }
+
+
+type InitialStateType = {
+    products: Product[];
+    cart: Product[];
+    getProducts: () => void;
+}
+

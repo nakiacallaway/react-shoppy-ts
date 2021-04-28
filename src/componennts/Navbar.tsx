@@ -1,6 +1,9 @@
+import {useContext} from 'react';
+import {GlobalContext} from '../context/GlobalContext';
 import {Link} from 'react-router-dom';
 
 const Navbar = () => {
+    
     return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <Link to='/'>Shopsy</Link>

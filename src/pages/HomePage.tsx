@@ -1,31 +1,28 @@
-import {useState, useEffect} from 'react';
+import {useState, useEffect, useContext} from 'react';
+import {GlobalContext} from '../context/GlobalContext';
 
 const HomePage = () => {
-    const [products, setProducts] = useState<Product[]>([]);
+    const {products, getProducts} = useContext(GlobalContext);
+    
+    
 
     useEffect(() => {
-        fetchProducts();
-    }, [] );
+        getProducts();
+    }, []);
+     
 
-    const fetchProducts = async (): Promise<void> => {
-        try {
-            let prods = await (await fetch('https://fakestoreapi.com/products')).json();
-            
-            setProducts(prods);
-        }
-
-        catch (e) {
-            console.log(e);
-        }
-    }
     return (
     <div id='home'>
         <div className="row text-center">
             <div className="col">
                 <h2>Home Page</h2>
+                <h3>You have {products.length} to choose from</h3> 
             </div>
         </div>
-        {/* <div className="row">
+        <div className="row">
+            
+        </div>
+        <div className="row">
             <ul className="list-group">
                 {products.map((product, index) => {
                     return (
@@ -33,7 +30,7 @@ const HomePage = () => {
                     )
                 })}
             </ul>
-        </div> */}
+        </div>
     </div>
     )
 }
