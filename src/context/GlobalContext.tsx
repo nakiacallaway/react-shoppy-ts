@@ -24,15 +24,8 @@ export const GlobalProvider: React.FC = ({children}) => {
     const getProducts = async () => {
         try {
             let {data} = await instance.get('/products')
-        
-        //     (
-        //     await fetch('https://fakestoreapi.com/products')
-        //         ).json();
-                dispatch({type: 'GET_PRODUCTS', payload:data})
+            dispatch({type: 'GET_PRODUCTS', payload:data})
         }
-
-
-
 
         catch (e) {
             console.log(e);
